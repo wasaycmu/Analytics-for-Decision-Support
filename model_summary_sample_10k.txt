@@ -1,0 +1,419 @@
+
+Call:
+lm(formula = `Total Charges` ~ `Health Service Area` + `Age Group` + 
+    Gender + Race + Ethnicity + `Length of Stay` + `Type of Admission` + 
+    `Patient Disposition` + CSS_P_Code_Cleaned + APR_Cleaned + 
+    `APR MDC Code` + `APR Severity of Illness Code` + `APR Risk of Mortality` + 
+    `APR Medical Surgical Description` + `Payment Typology 1` + 
+    `Payment Typology 2` + `Payment Typology 3` + `Birth Weight` + 
+    `Emergency Department Indicator`, data = train_set)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-507414  -11492    -536   11261 1790573 
+
+Coefficients:
+                                                             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                                                 8.776e+04  3.327e+04   2.638 0.008373 ** 
+`Health Service Area`Capital/Adiron                        -3.984e+04  2.220e+04  -1.795 0.072701 .  
+`Health Service Area`Central NY                            -4.127e+04  2.221e+04  -1.858 0.063208 .  
+`Health Service Area`Finger Lakes                          -4.706e+04  2.217e+04  -2.123 0.033793 *  
+`Health Service Area`Hudson Valley                         -1.864e+04  2.214e+04  -0.842 0.399936    
+`Health Service Area`Long Island                           -1.637e+04  2.213e+04  -0.740 0.459610    
+`Health Service Area`New York City                         -2.000e+04  2.207e+04  -0.906 0.364876    
+`Health Service Area`Southern Tier                         -4.152e+04  2.285e+04  -1.817 0.069277 .  
+`Health Service Area`Western NY                            -4.740e+04  2.219e+04  -2.136 0.032740 *  
+`Age Group`18 to 29                                        -2.181e+03  3.855e+03  -0.566 0.571539    
+`Age Group`30 to 49                                        -3.401e+03  3.554e+03  -0.957 0.338694    
+`Age Group`50 to 69                                        -3.335e+03  3.551e+03  -0.939 0.347643    
+`Age Group`70 or Older                                     -9.795e+03  4.027e+03  -2.432 0.015039 *  
+GenderM                                                     1.269e+01  1.355e+03   0.009 0.992531    
+RaceMulti-racial                                            4.121e+03  6.186e+03   0.666 0.505343    
+RaceOther Race                                              1.329e+03  2.032e+03   0.654 0.513225    
+RaceWhite                                                   1.854e+03  1.818e+03   1.019 0.308023    
+EthnicityNot Span/Hispanic                                 -4.598e+03  1.019e+04  -0.451 0.651968    
+EthnicitySpanish/Hispanic                                  -9.337e+03  1.029e+04  -0.908 0.364150    
+EthnicityUnknown                                           -5.952e+03  1.056e+04  -0.563 0.573125    
+`Length of Stay`                                            5.912e+03  9.589e+01  61.653  < 2e-16 ***
+`Type of Admission`Emergency                                3.018e+03  3.042e+03   0.992 0.321276    
+`Type of Admission`Newborn                                 -1.350e+04  1.384e+04  -0.976 0.329215    
+`Type of Admission`Not Available                            1.136e+04  4.963e+04   0.229 0.818924    
+`Type of Admission`Trauma                                   6.910e+03  1.539e+04   0.449 0.653522    
+`Type of Admission`Urgent                                   4.665e+03  2.905e+03   1.606 0.108356    
+`Patient Disposition`Cancer Center or Children's Hospital   1.451e+04  1.914e+04   0.758 0.448292    
+`Patient Disposition`Court/Law Enforcement                  1.658e+04  2.546e+04   0.651 0.514931    
+`Patient Disposition`Expired                               -1.416e+04  1.062e+04  -1.333 0.182560    
+`Patient Disposition`Facility w/ Custodial/Supportive Care -4.006e+03  1.522e+04  -0.263 0.792370    
+`Patient Disposition`Federal Health Care Facility          -1.665e+05  2.698e+04  -6.171 7.22e-10 ***
+`Patient Disposition`Home or Self Care                     -2.565e+03  9.625e+03  -0.266 0.789880    
+`Patient Disposition`Home w/ Home Health Services           1.744e+03  9.781e+03   0.178 0.858491    
+`Patient Disposition`Hosp Basd Medicare Approved Swing Bed  3.224e+03  3.605e+04   0.089 0.928745    
+`Patient Disposition`Hospice - Home                        -1.549e+04  1.350e+04  -1.148 0.251186    
+`Patient Disposition`Hospice - Medical Facility            -2.128e+04  1.238e+04  -1.719 0.085626 .  
+`Patient Disposition`Inpatient Rehabilitation Facility      3.428e+04  1.069e+04   3.206 0.001355 ** 
+`Patient Disposition`Left Against Medical Advice           -2.695e+03  1.100e+04  -0.245 0.806412    
+`Patient Disposition`Medicare Cert Long Term Care Hospital -1.073e+04  1.965e+04  -0.546 0.585193    
+`Patient Disposition`Psychiatric Hospital or Unit of Hosp   6.136e+03  1.386e+04   0.443 0.658070    
+`Patient Disposition`Short-term Hospital                   -2.474e+03  1.081e+04  -0.229 0.818996    
+`Patient Disposition`Skilled Nursing Home                  -3.251e+03  9.884e+03  -0.329 0.742253    
+CSS_P_Code_Cleaned1                                        -7.325e+02  2.303e+04  -0.032 0.974632    
+CSS_P_Code_Cleaned10                                       -1.786e+04  3.080e+04  -0.580 0.562038    
+CSS_P_Code_Cleaned101                                      -2.054e+04  1.845e+04  -1.114 0.265529    
+CSS_P_Code_Cleaned102                                       6.829e+03  1.674e+04   0.408 0.683358    
+CSS_P_Code_Cleaned103                                       9.049e+03  2.165e+04   0.418 0.675915    
+CSS_P_Code_Cleaned104                                       2.796e+04  2.303e+04   1.214 0.224904    
+CSS_P_Code_Cleaned108                                       8.159e+03  1.264e+04   0.646 0.518494    
+CSS_P_Code_Cleaned111                                       2.148e+03  1.680e+04   0.128 0.898233    
+CSS_P_Code_Cleaned112                                       6.566e+03  2.041e+04   0.322 0.747738    
+CSS_P_Code_Cleaned113                                      -2.373e+04  2.145e+04  -1.106 0.268666    
+CSS_P_Code_Cleaned114                                      -2.516e+04  5.018e+04  -0.501 0.616085    
+CSS_P_Code_Cleaned115                                       7.848e+03  5.815e+03   1.350 0.177203    
+CSS_P_Code_Cleaned124                                       4.380e+02  1.883e+04   0.023 0.981445    
+CSS_P_Code_Cleaned125                                      -1.618e+04  2.736e+04  -0.591 0.554264    
+CSS_P_Code_Cleaned131                                       4.408e+03  1.619e+04   0.272 0.785481    
+CSS_P_Code_Cleaned133                                      -2.750e+03  1.259e+04  -0.218 0.827103    
+CSS_P_Code_Cleaned134                                       4.347e+03  2.935e+04   0.148 0.882266    
+CSS_P_Code_Cleaned135                                       2.351e+03  1.501e+04   0.157 0.875545    
+CSS_P_Code_Cleaned136                                      -9.050e+01  1.600e+04  -0.006 0.995488    
+CSS_P_Code_Cleaned137                                       1.819e+03  8.619e+03   0.211 0.832893    
+CSS_P_Code_Cleaned139                                       1.186e+03  1.558e+04   0.076 0.939321    
+CSS_P_Code_Cleaned140                                       2.307e+03  9.521e+03   0.242 0.808513    
+CSS_P_Code_Cleaned142                                      -5.846e+03  1.725e+04  -0.339 0.734744    
+CSS_P_Code_Cleaned146                                       1.549e+04  1.811e+04   0.855 0.392377    
+CSS_P_Code_Cleaned147                                       1.955e+04  1.633e+04   1.198 0.231141    
+CSS_P_Code_Cleaned148                                       3.123e+03  1.739e+04   0.180 0.857518    
+CSS_P_Code_Cleaned152                                       3.341e+04  5.044e+04   0.662 0.507732    
+CSS_P_Code_Cleaned153                                       7.393e+03  2.724e+04   0.271 0.786073    
+CSS_P_Code_Cleaned154                                       2.420e+04  2.131e+04   1.135 0.256217    
+CSS_P_Code_Cleaned157                                      -4.752e+03  1.814e+04  -0.262 0.793420    
+CSS_P_Code_Cleaned158                                      -1.257e+04  1.811e+04  -0.694 0.487571    
+CSS_P_Code_Cleaned160                                      -6.733e+03  9.906e+03  -0.680 0.496717    
+CSS_P_Code_Cleaned161                                       3.146e+04  1.956e+04   1.608 0.107808    
+CSS_P_Code_Cleaned162                                       3.680e+04  1.817e+04   2.026 0.042848 *  
+CSS_P_Code_Cleaned167                                       7.535e+03  3.900e+04   0.193 0.846804    
+CSS_P_Code_Cleaned168                                      -1.850e+03  1.012e+04  -0.183 0.854944    
+CSS_P_Code_Cleaned169                                       1.882e+03  1.346e+04   0.140 0.888760    
+CSS_P_Code_Cleaned171                                       7.326e+03  1.547e+04   0.474 0.635855    
+CSS_P_Code_Cleaned174                                      -8.855e+03  1.180e+04  -0.750 0.453196    
+CSS_P_Code_Cleaned175                                      -4.960e+03  1.453e+04  -0.341 0.732889    
+CSS_P_Code_Cleaned177                                       3.585e+03  7.007e+03   0.512 0.608958    
+CSS_P_Code_Cleaned178                                       5.022e+03  1.486e+04   0.338 0.735347    
+CSS_P_Code_Cleaned179                                      -8.946e+02  9.343e+03  -0.096 0.923723    
+CSS_P_Code_Cleaned180                                       1.237e+04  1.319e+04   0.938 0.348441    
+CSS_P_Code_Cleaned193                                       6.623e+03  5.818e+03   1.138 0.255057    
+CSS_P_Code_Cleaned196                                       1.853e+03  1.549e+04   0.120 0.904756    
+CSS_P_Code_Cleaned197                                       7.966e+02  2.189e+04   0.036 0.970973    
+CSS_P_Code_Cleaned198                                      -2.537e+03  9.217e+03  -0.275 0.783162    
+CSS_P_Code_Cleaned199                                       2.555e+03  1.078e+04   0.237 0.812649    
+CSS_P_Code_Cleaned201                                      -1.609e+04  2.031e+04  -0.792 0.428352    
+CSS_P_Code_Cleaned202                                       2.626e+03  1.718e+04   0.153 0.878528    
+CSS_P_Code_Cleaned203                                       1.014e+04  9.669e+03   1.048 0.294479    
+CSS_P_Code_Cleaned213                                      -7.593e+03  8.371e+03  -0.907 0.364405    
+CSS_P_Code_Cleaned215                                      -4.980e+03  1.579e+04  -0.315 0.752444    
+CSS_P_Code_Cleaned216                                       9.216e+03  4.237e+03   2.175 0.029652 *  
+CSS_P_Code_Cleaned217                                      -4.090e+02  6.569e+03  -0.062 0.950355    
+CSS_P_Code_Cleaned218                                      -1.599e+04  5.739e+03  -2.786 0.005359 ** 
+CSS_P_Code_Cleaned219                                      -1.049e+04  8.129e+03  -1.290 0.197097    
+CSS_P_Code_Cleaned220                                       1.189e+04  6.005e+03   1.980 0.047777 *  
+CSS_P_Code_Cleaned221                                       1.011e+04  1.549e+04   0.653 0.513748    
+CSS_P_Code_Cleaned222                                       4.726e+03  5.224e+03   0.905 0.365652    
+CSS_P_Code_Cleaned223                                       9.155e+03  1.069e+04   0.857 0.391727    
+CSS_P_Code_Cleaned224                                       3.070e+03  1.572e+04   0.195 0.845164    
+CSS_P_Code_Cleaned225                                      -2.318e+03  1.136e+04  -0.204 0.838409    
+CSS_P_Code_Cleaned226                                       3.234e+02  1.416e+04   0.023 0.981783    
+CSS_P_Code_Cleaned227                                       1.471e+03  7.813e+03   0.188 0.850646    
+CSS_P_Code_Cleaned228                                       5.422e+03  4.680e+03   1.159 0.246704    
+CSS_P_Code_Cleaned231                                       2.777e+03  2.607e+03   1.065 0.286922    
+CSS_P_Code_Cleaned3                                        -2.042e+04  1.814e+04  -1.126 0.260263    
+CSS_P_Code_Cleaned33                                       -2.195e+04  2.160e+04  -1.017 0.309381    
+CSS_P_Code_Cleaned34                                       -2.024e+05  2.482e+04  -8.154 4.23e-16 ***
+CSS_P_Code_Cleaned36                                        4.820e+04  1.930e+04   2.497 0.012556 *  
+CSS_P_Code_Cleaned37                                        2.315e+04  1.092e+04   2.119 0.034115 *  
+CSS_P_Code_Cleaned39                                        1.639e+03  1.082e+04   0.151 0.879589    
+CSS_P_Code_Cleaned4                                        -7.141e+03  1.018e+04  -0.702 0.482982    
+CSS_P_Code_Cleaned41                                        6.914e+03  1.574e+04   0.439 0.660454    
+CSS_P_Code_Cleaned42                                       -6.495e+03  2.183e+04  -0.298 0.766034    
+CSS_P_Code_Cleaned43                                        1.564e+05  1.605e+04   9.743  < 2e-16 ***
+CSS_P_Code_Cleaned44                                        1.614e+05  5.232e+04   3.084 0.002049 ** 
+CSS_P_Code_Cleaned45                                        6.616e+04  1.247e+04   5.305 1.16e-07 ***
+CSS_P_Code_Cleaned47                                        3.810e+04  1.005e+04   3.790 0.000152 ***
+CSS_P_Code_Cleaned48                                       -2.890e+04  1.719e+04  -1.681 0.092806 .  
+CSS_P_Code_Cleaned49                                        2.115e+05  1.446e+04  14.627  < 2e-16 ***
+CSS_P_Code_Cleaned5                                         6.322e+03  1.742e+04   0.363 0.716678    
+CSS_P_Code_Cleaned51                                       -3.427e+04  3.982e+04  -0.861 0.389532    
+CSS_P_Code_Cleaned52                                        6.135e+04  1.835e+04   3.344 0.000832 ***
+CSS_P_Code_Cleaned54                                        1.754e+04  6.418e+03   2.733 0.006301 ** 
+CSS_P_Code_Cleaned55                                       -1.695e+04  1.588e+04  -1.067 0.285864    
+CSS_P_Code_Cleaned58                                        2.207e+03  6.164e+03   0.358 0.720282    
+CSS_P_Code_Cleaned59                                        3.672e+04  3.778e+04   0.972 0.331102    
+CSS_P_Code_Cleaned61                                        2.712e+04  1.007e+04   2.693 0.007096 ** 
+CSS_P_Code_Cleaned63                                        1.974e+04  1.442e+04   1.369 0.171021    
+CSS_P_Code_Cleaned65                                        1.731e+04  2.373e+04   0.729 0.465781    
+CSS_P_Code_Cleaned67                                       -1.718e+04  1.831e+04  -0.938 0.348203    
+CSS_P_Code_Cleaned70                                        3.377e+03  6.611e+03   0.511 0.609529    
+CSS_P_Code_Cleaned71                                       -2.052e+04  1.545e+04  -1.328 0.184184    
+CSS_P_Code_Cleaned74                                       -1.344e+04  1.880e+04  -0.715 0.474667    
+CSS_P_Code_Cleaned76                                       -6.013e+03  1.147e+04  -0.524 0.600135    
+CSS_P_Code_Cleaned78                                        1.975e+04  1.401e+04   1.410 0.158577    
+CSS_P_Code_Cleaned8                                         1.261e+04  1.772e+04   0.712 0.476582    
+CSS_P_Code_Cleaned80                                        1.779e+04  3.769e+04   0.472 0.636884    
+CSS_P_Code_Cleaned83                                        1.086e+04  1.529e+04   0.710 0.477620    
+CSS_P_Code_Cleaned84                                       -7.228e+04  2.947e+04  -2.453 0.014198 *  
+CSS_P_Code_Cleaned85                                       -6.463e+03  3.023e+04  -0.214 0.830722    
+CSS_P_Code_Cleaned86                                        3.048e+04  1.653e+04   1.844 0.065263 .  
+CSS_P_Code_Cleaned88                                        4.626e+03  1.085e+04   0.426 0.669951    
+CSS_P_Code_Cleaned9                                        -1.418e+04  1.887e+04  -0.752 0.452316    
+CSS_P_Code_Cleaned90                                        1.506e+03  2.208e+04   0.068 0.945633    
+CSS_P_Code_Cleaned92                                        1.983e+04  1.431e+04   1.386 0.165651    
+CSS_P_Code_Cleaned93                                        3.099e+04  1.619e+04   1.914 0.055662 .  
+CSS_P_Code_Cleaned94                                       -7.977e+03  1.551e+04  -0.514 0.607000    
+CSS_P_Code_Cleaned95                                        3.377e+03  1.289e+04   0.262 0.793286    
+CSS_P_Code_Cleaned96                                        1.361e+04  1.504e+04   0.905 0.365663    
+CSS_P_Code_Cleaned98                                        1.864e+04  1.275e+04   1.462 0.143683    
+CSS_P_Code_Cleaned99                                       -3.723e+04  1.543e+04  -2.412 0.015895 *  
+CSS_P_Code_Cleanedrare                                      6.745e+03  4.315e+03   1.563 0.118102    
+APR_Cleaned113                                             -5.694e+03  1.430e+04  -0.398 0.690505    
+APR_Cleaned114                                             -6.759e+03  2.064e+04  -0.327 0.743320    
+APR_Cleaned115                                             -1.324e+04  1.968e+04  -0.673 0.501111    
+APR_Cleaned120                                             -8.358e+04  3.090e+04  -2.705 0.006844 ** 
+APR_Cleaned121                                             -5.247e+04  2.880e+04  -1.822 0.068488 .  
+APR_Cleaned130                                              7.294e+03  2.788e+04   0.262 0.793621    
+APR_Cleaned133                                             -3.097e+04  2.190e+04  -1.414 0.157395    
+APR_Cleaned134                                             -2.406e+04  2.280e+04  -1.055 0.291279    
+APR_Cleaned135                                             -1.586e+04  2.610e+04  -0.607 0.543569    
+APR_Cleaned136                                             -3.690e+04  2.350e+04  -1.570 0.116474    
+APR_Cleaned137                                             -2.811e+04  2.240e+04  -1.255 0.209454    
+APR_Cleaned138                                             -2.971e+04  2.317e+04  -1.282 0.199821    
+APR_Cleaned139                                             -2.533e+04  2.134e+04  -1.187 0.235368    
+APR_Cleaned140                                             -2.595e+04  2.137e+04  -1.214 0.224699    
+APR_Cleaned141                                             -2.496e+04  2.241e+04  -1.114 0.265392    
+APR_Cleaned143                                             -3.093e+04  2.483e+04  -1.245 0.213004    
+APR_Cleaned144                                             -2.509e+04  2.352e+04  -1.067 0.286126    
+APR_Cleaned161                                              1.821e+04  2.751e+04   0.662 0.508020    
+APR_Cleaned162                                             -1.521e+05  3.284e+04  -4.632 3.69e-06 ***
+APR_Cleaned163                                             -1.584e+05  2.783e+04  -5.694 1.30e-08 ***
+APR_Cleaned165                                             -1.990e+05  5.706e+04  -3.488 0.000490 ***
+APR_Cleaned166                                             -2.056e+05  5.855e+04  -3.512 0.000448 ***
+APR_Cleaned167                                             -1.864e+05  2.963e+04  -6.290 3.38e-10 ***
+APR_Cleaned171                                             -7.188e+04  2.699e+04  -2.664 0.007751 ** 
+APR_Cleaned173                                             -8.865e+04  2.226e+04  -3.982 6.91e-05 ***
+APR_Cleaned174                                             -1.415e+05  2.358e+04  -6.001 2.07e-09 ***
+APR_Cleaned175                                             -1.643e+05  2.260e+04  -7.272 3.99e-13 ***
+APR_Cleaned190                                             -7.957e+04  2.110e+04  -3.771 0.000164 ***
+APR_Cleaned191                                             -8.929e+04  2.279e+04  -3.917 9.06e-05 ***
+APR_Cleaned192                                             -9.467e+04  2.315e+04  -4.089 4.38e-05 ***
+APR_Cleaned194                                             -8.054e+04  1.937e+04  -4.157 3.27e-05 ***
+APR_Cleaned197                                             -8.078e+04  2.135e+04  -3.784 0.000156 ***
+APR_Cleaned198                                             -7.602e+04  2.071e+04  -3.671 0.000243 ***
+APR_Cleaned199                                             -7.776e+04  2.194e+04  -3.545 0.000396 ***
+APR_Cleaned200                                             -7.774e+04  2.488e+04  -3.124 0.001792 ** 
+APR_Cleaned201                                             -6.986e+04  1.970e+04  -3.547 0.000393 ***
+APR_Cleaned203                                             -7.463e+04  2.044e+04  -3.652 0.000263 ***
+APR_Cleaned204                                             -7.759e+04  1.999e+04  -3.882 0.000105 ***
+APR_Cleaned206                                             -7.903e+04  2.585e+04  -3.057 0.002247 ** 
+APR_Cleaned207                                             -6.753e+04  2.248e+04  -3.004 0.002679 ** 
+APR_Cleaned21                                              -1.998e+04  2.840e+04  -0.704 0.481687    
+APR_Cleaned220                                             -2.072e+04  2.784e+04  -0.744 0.456817    
+APR_Cleaned221                                             -3.323e+04  2.384e+04  -1.394 0.163408    
+APR_Cleaned222                                              1.799e+03  2.922e+04   0.062 0.950928    
+APR_Cleaned223                                             -4.338e+04  2.689e+04  -1.613 0.106759    
+APR_Cleaned224                                             -2.010e+03  3.586e+04  -0.056 0.955299    
+APR_Cleaned225                                             -5.156e+04  4.208e+04  -1.225 0.220476    
+APR_Cleaned227                                             -5.096e+04  2.719e+04  -1.874 0.060936 .  
+APR_Cleaned23                                              -4.945e+04  2.955e+04  -1.674 0.094219 .  
+APR_Cleaned24                                              -2.401e+04  4.202e+04  -0.571 0.567770    
+APR_Cleaned240                                              1.730e+03  2.434e+04   0.071 0.943338    
+APR_Cleaned241                                              3.403e+03  2.163e+04   0.157 0.875020    
+APR_Cleaned243                                              6.002e+03  2.503e+04   0.240 0.810526    
+APR_Cleaned244                                              9.709e+03  2.117e+04   0.459 0.646496    
+APR_Cleaned245                                              3.667e+03  2.368e+04   0.155 0.876951    
+APR_Cleaned247                                              4.672e+03  2.139e+04   0.218 0.827110    
+APR_Cleaned248                                              6.589e+03  2.319e+04   0.284 0.776303    
+APR_Cleaned249                                              5.162e+03  2.064e+04   0.250 0.802533    
+APR_Cleaned251                                              8.189e+03  2.195e+04   0.373 0.709128    
+APR_Cleaned252                                             -7.548e+03  2.347e+04  -0.322 0.747753    
+APR_Cleaned253                                              2.872e+04  2.134e+04   1.346 0.178347    
+APR_Cleaned254                                              7.726e+03  2.095e+04   0.369 0.712284    
+APR_Cleaned263                                             -2.927e+04  3.014e+04  -0.971 0.331510    
+APR_Cleaned279                                             -6.146e+04  2.832e+04  -2.170 0.030034 *  
+APR_Cleaned280                                             -6.389e+04  3.200e+04  -1.997 0.045877 *  
+APR_Cleaned281                                             -1.002e+05  2.568e+04  -3.903 9.61e-05 ***
+APR_Cleaned282                                             -6.562e+04  2.461e+04  -2.667 0.007681 ** 
+APR_Cleaned283                                             -6.535e+04  3.065e+04  -2.132 0.033022 *  
+APR_Cleaned284                                             -6.008e+04  2.508e+04  -2.395 0.016641 *  
+APR_Cleaned301                                              1.247e+04  3.568e+04   0.350 0.726637    
+APR_Cleaned302                                             -7.982e+03  5.572e+04  -0.143 0.886089    
+APR_Cleaned303                                              1.591e+05  3.397e+04   4.682 2.90e-06 ***
+APR_Cleaned304                                              1.045e+05  3.031e+04   3.447 0.000571 ***
+APR_Cleaned308                                             -2.163e+04  2.920e+04  -0.741 0.458975    
+APR_Cleaned309                                             -1.090e+04  3.131e+04  -0.348 0.727796    
+APR_Cleaned310                                              2.025e+04  3.022e+04   0.670 0.502878    
+APR_Cleaned313                                             -1.156e+04  2.791e+04  -0.414 0.678642    
+APR_Cleaned314                                              1.155e+03  2.803e+04   0.041 0.967131    
+APR_Cleaned315                                              1.165e+04  2.866e+04   0.406 0.684446    
+APR_Cleaned317                                             -1.030e+04  3.125e+04  -0.330 0.741729    
+APR_Cleaned320                                             -2.704e+04  3.089e+04  -0.876 0.381328    
+APR_Cleaned321                                              4.961e+04  2.993e+04   1.657 0.097486 .  
+APR_Cleaned341                                              4.254e+04  2.835e+04   1.500 0.133540    
+APR_Cleaned342                                              3.484e+04  2.633e+04   1.323 0.185778    
+APR_Cleaned343                                              7.061e+04  2.785e+04   2.535 0.011257 *  
+APR_Cleaned344                                              4.362e+04  2.805e+04   1.555 0.119953    
+APR_Cleaned346                                              3.573e+04  2.834e+04   1.261 0.207508    
+APR_Cleaned347                                              3.634e+04  2.525e+04   1.439 0.150071    
+APR_Cleaned349                                              4.996e+04  3.005e+04   1.663 0.096401 .  
+APR_Cleaned351                                              3.419e+04  2.517e+04   1.358 0.174415    
+APR_Cleaned362                                             -3.110e+04  4.088e+04  -0.761 0.446737    
+APR_Cleaned364                                             -4.550e+04  2.695e+04  -1.688 0.091469 .  
+APR_Cleaned380                                             -1.583e+04  2.647e+04  -0.598 0.549784    
+APR_Cleaned383                                             -8.324e+03  2.013e+04  -0.413 0.679270    
+APR_Cleaned384                                              9.808e+03  2.298e+04   0.427 0.669522    
+APR_Cleaned385                                             -6.728e+03  2.529e+04  -0.266 0.790230    
+APR_Cleaned403                                             -2.812e+04  2.952e+04  -0.953 0.340815    
+APR_Cleaned404                                             -3.468e+04  3.730e+04  -0.930 0.352527    
+APR_Cleaned41                                              -4.895e+04  2.423e+04  -2.020 0.043435 *  
+APR_Cleaned42                                              -4.985e+04  2.300e+04  -2.167 0.030258 *  
+APR_Cleaned420                                             -2.003e+04  2.365e+04  -0.847 0.396932    
+APR_Cleaned421                                             -1.492e+04  2.912e+04  -0.513 0.608250    
+APR_Cleaned422                                             -1.433e+04  2.453e+04  -0.584 0.559154    
+APR_Cleaned424                                             -1.932e+04  2.507e+04  -0.771 0.440814    
+APR_Cleaned425                                             -1.310e+04  2.376e+04  -0.552 0.581237    
+APR_Cleaned43                                              -3.939e+04  2.462e+04  -1.600 0.109704    
+APR_Cleaned44                                              -3.618e+04  2.277e+04  -1.589 0.112113    
+APR_Cleaned442                                             -2.447e+04  3.037e+04  -0.806 0.420382    
+APR_Cleaned443                                             -4.197e+04  2.773e+04  -1.514 0.130141    
+APR_Cleaned446                                             -2.060e+04  2.855e+04  -0.721 0.470779    
+APR_Cleaned45                                              -4.091e+04  1.950e+04  -2.099 0.035901 *  
+APR_Cleaned460                                              9.259e+02  2.000e+04   0.046 0.963078    
+APR_Cleaned463                                             -5.166e+03  2.006e+04  -0.258 0.796750    
+APR_Cleaned465                                              2.500e+03  2.370e+04   0.106 0.915969    
+APR_Cleaned466                                              2.680e+03  2.114e+04   0.127 0.899130    
+APR_Cleaned468                                             -1.591e+03  2.234e+04  -0.071 0.943236    
+APR_Cleaned47                                              -3.816e+04  2.058e+04  -1.855 0.063692 .  
+APR_Cleaned48                                              -4.344e+04  2.206e+04  -1.969 0.048981 *  
+APR_Cleaned480                                             -5.611e+03  5.233e+04  -0.107 0.914628    
+APR_Cleaned5                                                2.930e+05  2.907e+04  10.078  < 2e-16 ***
+APR_Cleaned513                                             -2.806e+04  2.631e+04  -1.067 0.286133    
+APR_Cleaned519                                             -3.086e+04  2.716e+04  -1.136 0.256042    
+APR_Cleaned52                                              -5.254e+04  2.210e+04  -2.377 0.017461 *  
+APR_Cleaned53                                              -4.660e+04  1.962e+04  -2.375 0.017579 *  
+APR_Cleaned532                                             -3.352e+03  2.766e+04  -0.121 0.903560    
+APR_Cleaned54                                              -3.570e+04  2.294e+04  -1.556 0.119675    
+APR_Cleaned540                                             -3.774e+04  3.561e+04  -1.060 0.289350    
+APR_Cleaned542                                             -3.943e+04  2.898e+04  -1.361 0.173684    
+APR_Cleaned55                                              -4.212e+04  2.144e+04  -1.964 0.049558 *  
+APR_Cleaned560                                              1.868e+04  2.105e+04   0.887 0.374947    
+APR_Cleaned561                                              2.100e+04  2.473e+04   0.849 0.395876    
+APR_Cleaned566                                              1.807e+04  2.146e+04   0.842 0.399860    
+APR_Cleaned57                                              -4.863e+04  2.654e+04  -1.832 0.066950 .  
+APR_Cleaned58                                              -4.055e+04  2.055e+04  -1.973 0.048501 *  
+APR_Cleaned626                                             -6.973e+04  2.239e+04  -3.114 0.001855 ** 
+APR_Cleaned633                                             -7.364e+04  2.429e+04  -3.032 0.002438 ** 
+APR_Cleaned636                                             -6.498e+04  2.627e+04  -2.474 0.013392 *  
+APR_Cleaned639                                             -7.677e+04  2.380e+04  -3.226 0.001262 ** 
+APR_Cleaned640                                             -9.162e+04  1.918e+04  -4.778 1.82e-06 ***
+APR_Cleaned660                                              6.562e+04  3.046e+04   2.154 0.031270 *  
+APR_Cleaned661                                              6.083e+04  3.147e+04   1.933 0.053312 .  
+APR_Cleaned662                                              3.679e+04  2.797e+04   1.315 0.188458    
+APR_Cleaned663                                              3.848e+04  2.755e+04   1.397 0.162558    
+APR_Cleaned681                                              1.381e+04  3.227e+04   0.428 0.668649    
+APR_Cleaned690                                             -6.595e+04  3.224e+04  -2.046 0.040811 *  
+APR_Cleaned691                                             -2.517e+04  2.814e+04  -0.895 0.370983    
+APR_Cleaned693                                             -3.681e+04  2.783e+04  -1.322 0.186063    
+APR_Cleaned710                                             -3.978e+04  2.816e+04  -1.412 0.157870    
+APR_Cleaned711                                             -6.004e+03  3.123e+04  -0.192 0.847553    
+APR_Cleaned720                                             -2.014e+03  2.463e+04  -0.082 0.934845    
+APR_Cleaned721                                              4.077e+03  2.641e+04   0.154 0.877350    
+APR_Cleaned722                                             -6.936e+03  2.725e+04  -0.255 0.799099    
+APR_Cleaned723                                              7.093e+03  2.878e+04   0.246 0.805307    
+APR_Cleaned750                                             -1.563e+04  2.345e+04  -0.666 0.505274    
+APR_Cleaned751                                             -7.553e+03  2.359e+04  -0.320 0.748857    
+APR_Cleaned753                                             -1.381e+03  2.336e+04  -0.059 0.952845    
+APR_Cleaned754                                              1.294e+04  2.492e+04   0.519 0.603546    
+APR_Cleaned755                                              1.898e+04  2.666e+04   0.712 0.476506    
+APR_Cleaned756                                              2.930e+04  2.779e+04   1.054 0.291718    
+APR_Cleaned757                                             -2.487e+04  2.613e+04  -0.952 0.341216    
+APR_Cleaned770                                             -4.813e+03  3.434e+04  -0.140 0.888536    
+APR_Cleaned772                                             -5.750e+04  3.374e+04  -1.704 0.088348 .  
+APR_Cleaned773                                             -6.937e+03  3.356e+04  -0.207 0.836255    
+APR_Cleaned774                                             -8.135e+03  3.483e+04  -0.234 0.815321    
+APR_Cleaned775                                             -9.267e+03  3.296e+04  -0.281 0.778590    
+APR_Cleaned812                                              2.681e+04  2.463e+04   1.088 0.276421    
+APR_Cleaned813                                              2.956e+04  2.500e+04   1.182 0.237192    
+APR_Cleaned816                                              2.675e+04  2.667e+04   1.003 0.315915    
+APR_Cleaned860                                             -1.130e+04  2.316e+04  -0.488 0.625584    
+APR_Cleaned861                                              8.542e+03  2.338e+04   0.365 0.714866    
+APR_Cleaned890                                             -3.459e+04  2.953e+04  -1.171 0.241509    
+APR_Cleaned894                                              1.226e+04  3.138e+04   0.391 0.696163    
+APR_Cleaned912                                             -5.053e+04  3.872e+04  -1.305 0.191977    
+APR_Cleaned950                                             -2.990e+04  2.419e+04  -1.236 0.216557    
+APR_Cleaned951                                             -7.076e+04  2.359e+04  -2.999 0.002719 ** 
+APR_Cleaned952                                             -5.908e+04  2.633e+04  -2.244 0.024851 *  
+APR_Cleanedrare                                            -1.957e+04  1.704e+04  -1.149 0.250790    
+`APR MDC Code`2                                            -2.407e+04  1.934e+04  -1.245 0.213335    
+`APR MDC Code`3                                            -4.073e+04  1.477e+04  -2.758 0.005839 ** 
+`APR MDC Code`4                                            -2.349e+04  1.520e+04  -1.546 0.122245    
+`APR MDC Code`5                                             3.168e+04  1.283e+04   2.470 0.013545 *  
+`APR MDC Code`6                                            -5.398e+04  1.463e+04  -3.690 0.000226 ***
+`APR MDC Code`7                                             1.592e+04  1.918e+04   0.830 0.406654    
+`APR MDC Code`8                                            -8.604e+04  1.973e+04  -4.362 1.31e-05 ***
+`APR MDC Code`9                                            -4.079e+04  1.400e+04  -2.914 0.003578 ** 
+`APR MDC Code`10                                           -3.222e+04  1.800e+04  -1.790 0.073456 .  
+`APR MDC Code`11                                           -4.930e+04  1.429e+04  -3.450 0.000564 ***
+`APR MDC Code`12                                           -4.189e+04  1.719e+04  -2.437 0.014839 *  
+`APR MDC Code`13                                           -5.102e+04  1.722e+04  -2.963 0.003063 ** 
+`APR MDC Code`14                                           -6.530e+04  1.523e+04  -4.286 1.84e-05 ***
+`APR MDC Code`15                                           -3.378e+04  1.991e+04  -1.697 0.089792 .  
+`APR MDC Code`16                                           -8.239e+04  2.327e+04  -3.541 0.000402 ***
+`APR MDC Code`17                                           -5.563e+03  1.758e+04  -0.317 0.751599    
+`APR MDC Code`18                                           -4.811e+04  1.953e+04  -2.464 0.013782 *  
+`APR MDC Code`19                                           -7.334e+04  1.790e+04  -4.098 4.22e-05 ***
+`APR MDC Code`20                                           -4.274e+04  2.932e+04  -1.458 0.144883    
+`APR MDC Code`21                                           -7.672e+04  1.714e+04  -4.475 7.77e-06 ***
+`APR MDC Code`22                                            4.087e+04  2.592e+04   1.577 0.114869    
+`APR MDC Code`23                                           -5.963e+04  1.768e+04  -3.372 0.000750 ***
+`APR MDC Code`24                                           -3.617e+04  2.182e+04  -1.657 0.097487 .  
+`APR MDC Code`25                                           -3.375e+04  2.667e+04  -1.265 0.205840    
+`APR Severity of Illness Code`2                             2.448e+03  1.610e+03   1.521 0.128283    
+`APR Severity of Illness Code`3                             5.330e+03  2.409e+03   2.213 0.026968 *  
+`APR Severity of Illness Code`4                             3.925e+04  4.432e+03   8.856  < 2e-16 ***
+`APR Risk of Mortality`Major                               -4.622e+03  4.141e+03  -1.116 0.264439    
+`APR Risk of Mortality`Minor                               -8.890e+03  4.874e+03  -1.824 0.068208 .  
+`APR Risk of Mortality`Moderate                            -5.968e+03  4.558e+03  -1.309 0.190500    
+`APR Medical Surgical Description`Surgical                  5.428e+04  7.448e+03   7.287 3.57e-13 ***
+`Payment Typology 1`Department of Corrections              -1.186e+04  2.017e+04  -0.588 0.556665    
+`Payment Typology 1`Federal/State/Local/VA                  1.805e+03  9.219e+03   0.196 0.844786    
+`Payment Typology 1`Managed Care, Unspecified              -5.572e+03  7.145e+03  -0.780 0.435508    
+`Payment Typology 1`Medicaid                               -1.756e+03  2.329e+03  -0.754 0.450801    
+`Payment Typology 1`Medicare                               -2.566e+03  2.691e+03  -0.954 0.340339    
+`Payment Typology 1`Miscellaneous/Other                    -4.341e+03  6.529e+03  -0.665 0.506098    
+`Payment Typology 1`Private Health Insurance                3.405e+03  2.387e+03   1.426 0.153794    
+`Payment Typology 1`Self-Pay                               -3.182e+03  4.108e+03  -0.775 0.438573    
+`Payment Typology 1`Unknown                                -1.968e+04  1.292e+04  -1.523 0.127802    
+`Payment Typology 2`Blue Cross/Blue Shield                  7.291e+03  3.135e+03   2.325 0.020078 *  
+`Payment Typology 2`Department of Corrections               1.610e+04  4.804e+04   0.335 0.737538    
+`Payment Typology 2`Federal/State/Local/VA                 -1.354e+03  8.469e+03  -0.160 0.872954    
+`Payment Typology 2`Managed Care, Unspecified              -5.565e+03  1.629e+04  -0.342 0.732715    
+`Payment Typology 2`Medicaid                                1.112e+02  1.963e+03   0.057 0.954846    
+`Payment Typology 2`Medicare                                1.794e+03  2.589e+03   0.693 0.488296    
+`Payment Typology 2`Miscellaneous/Other                    -2.417e+03  7.681e+03  -0.315 0.753015    
+`Payment Typology 2`Private Health Insurance                2.349e+03  2.937e+03   0.800 0.423858    
+`Payment Typology 2`Self-Pay                               -8.015e+02  1.992e+03  -0.402 0.687502    
+`Payment Typology 2`Unknown                                -3.519e+04  1.231e+04  -2.858 0.004274 ** 
+`Payment Typology 3`Blue Cross/Blue Shield                 -2.041e+02  5.978e+03  -0.034 0.972768    
+`Payment Typology 3`Federal/State/Local/VA                  2.458e+03  1.629e+04   0.151 0.880049    
+`Payment Typology 3`Managed Care, Unspecified               3.413e+04  3.481e+04   0.981 0.326825    
+`Payment Typology 3`Medicaid                               -2.261e+03  3.257e+03  -0.694 0.487499    
+`Payment Typology 3`Medicare                                1.992e+03  6.494e+03   0.307 0.759006    
+`Payment Typology 3`Miscellaneous/Other                     8.981e+03  4.890e+04   0.184 0.854283    
+`Payment Typology 3`Private Health Insurance                2.155e+03  4.946e+03   0.436 0.663129    
+`Payment Typology 3`Self-Pay                               -1.497e+03  1.734e+03  -0.864 0.387850    
+`Payment Typology 3`Unknown                                 2.061e+04  9.550e+03   2.158 0.030969 *  
+`Birth Weight`                                              2.370e+01  2.511e+00   9.440  < 2e-16 ***
+`Emergency Department Indicator`Y                          -3.239e+02  2.395e+03  -0.135 0.892434    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 47590 on 6102 degrees of freedom
+Multiple R-squared:  0.6703,	Adjusted R-squared:  0.6489 
+F-statistic:  31.4 on 395 and 6102 DF,  p-value: < 2.2e-16
+
